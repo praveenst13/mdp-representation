@@ -1,28 +1,49 @@
 # MDP REPRESENTATION
 
 ## AIM:
-
+  To represent any one real-world problem in MDP form.
 
 ## PROBLEM STATEMENT:
+ 
 
 ### Problem Description
+   The task is to train a robotic arm to pick up an object, move it to a designated spot by moving right, then straight, and finally release the object at the target location. The task is broken down into sequential stages: hold, move right, move straight, and release.
 
 
 ### State Space
+The state space represents all possible configurations of the robotic arm during the task. Each state is defined by:
+
+Position of the robotic arm's end effector (gripper).
+Gripper status (open or closed).
+Current stage of the task (hold, move right, move straight, release).
 
 
 ### Sample State
+ Current stage: move right.
 
 
 ### Action Space
+The action space consists of the following possible actions:
+
+Hold: Close the gripper to grab the object.
+Move Right: Move the end effector horizontally to the right.
+Move Straight: Move the end effector vertically towards the target.
+Release: Open the gripper to release the object.
 
 ### Sample Action
-
+ Action: Move right
 
 ### Reward Function
+The reward function is defined as follows:
 
++1 for successfully holding the object.
++1 for successfully moving the object right.
++1 for successfully moving the object straight towards the target.
++10 for successfully releasing the object at the target location.
+-1 for incorrect actions or any movement that does not contribute towards the goal.
 
 ### Graphical Representation
+![image](https://github.com/user-attachments/assets/a516f071-3396-4a20-aa82-2c67f2758645)
 
 
 ## PYTHON REPRESENTATION:
